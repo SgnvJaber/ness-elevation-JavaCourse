@@ -3,7 +3,7 @@ package lesson01;
 public class Statements05 {
     public static void main(String[] args) {
         int age = 100;
-        if(age > 0 && age <= 6)
+        if (age > 0 && age <= 6)
             System.out.println("Go to Kindergarten");
         else if (7 <= age && age <= 18)
             System.out.println("Go to School");

@@ -5,5 +5,5 @@ public class MyFirstClass {
     public static void main(String[] args) {
         //System.out.print("Hello Lior");//won't print new line
         System.out.println("Hello world");//will print new line
-         }
+    }
 }

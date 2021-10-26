@@ -20,7 +20,7 @@ public class Statements04 {
         else
             System.out.println("No,Sorry...");
         //Print the length of the first value
-        System.out.println("Length:"+countries[0].length());
+        System.out.println("Length:" + countries[0].length());
 
     }
 }
