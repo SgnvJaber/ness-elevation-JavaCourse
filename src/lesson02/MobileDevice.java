@@ -9,6 +9,24 @@ public class MobileDevice {
     int screenWidth;
     int screenHeight;
 
+    public MobileDevice(String model, char os, double version, boolean hasFlash, int price, int screenWidth, int screenHeight) {
+        this.model = model;
+        this.os = os;
+        this.version = version;
+        this.hasFlash = hasFlash;
+        this.price = price;
+        if(screenWidth > 0)
+            this.screenWidth = screenWidth;
+        else
+            throw new RuntimeException("Wrong width");
+        if(screenHeight > 0)
+            this.screenHeight = screenHeight;
+        else
+            throw new RuntimeException("Wrong height");
+
+
+    }
+
     void printParameters() {
         System.out.println(model + " " + os + " " + " " + version + " " + hasFlash + " " + price + " ");
     }

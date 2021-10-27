@@ -1,5 +1,6 @@
 package lesson02;
 
+//Saed Jaber,ID:208480632
 public class PalindromeCheck {
     public static boolean isPalindrome(String word) {
         boolean isPalindrome = true;

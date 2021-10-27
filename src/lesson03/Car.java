@@ -1,4 +1,4 @@
-package lesson02;
+package lesson03;
 
 public class Car {
     //Properties
@@ -6,6 +6,15 @@ public class Car {
     int year;
     double price;
     boolean hasAbs;
+
+    //Constructor
+    public Car(String manufacturer, String model, int year, double price, boolean hasAbs) {
+        this.manufacturer = manufacturer;
+        this.model = model;
+        this.year=year;
+        this.price = price;
+        this.hasAbs = hasAbs;
+    }
 
     //Methods
     void print() {
