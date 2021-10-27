@@ -1,6 +1,6 @@
 package lesson03;
 
-public class MainProgram {
+public class MainProgramInterface {
     public static void main(String[] args) {
         Israel israel = new Israel();
         USA usa = new USA();

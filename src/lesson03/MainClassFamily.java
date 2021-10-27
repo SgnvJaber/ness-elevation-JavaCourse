@@ -1,6 +1,6 @@
 package lesson03;
 
-public class MainClass {
+public class MainClassFamily {
     public static void main(String[] args) {
         Child1 my_name = new Child1();
         Child2 brother_name = new Child2();
