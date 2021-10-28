@@ -13,7 +13,7 @@ public class FinalMain {
         System.out.println("[" + double_to_reverse + "] in reverse is:[" + functions.reverseDouble(double_to_reverse) + "]");
         //Q3)
         System.out.println("=============POWER OF NUMBERS===============");
-        int[] numbers = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14};
+        int[] numbers = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
         functions.powerOfNumbers(numbers);
         //Q4)
         System.out.println("=============AVERAGE OF NUMBERS===============");
@@ -25,5 +25,29 @@ public class FinalMain {
         //Q6
         System.out.println("=============EvenDividedByFour===============");
         functions.printEvenDividedByFour(numbers);
+        //Q7
+        System.out.println("=============PRINT MIDDLE===============");
+        functions.printMiddle(numbers);
+        //Q8
+        System.out.println("=============PRINT LYRICS===============");
+        String song = "DO LA MI NO SA SIO ME NE";
+        functions.printSongLyrics(song);
+        //Q9A
+        String[] words = {"ABC", "AAAAA", "BBB", "kjhdsfkjo", "JDSDFHKJH", "FGH", "LXCVKJ", "XLCKVJL", "VCKJLK", "VLK;LK", "VLKL"};
+        System.out.println("=============PRINT LONGEST STRING===============");
+        functions.printLongestString(words);
+        //Q9B
+        System.out.println("=============SEARCH FOR STRING===============");
+        String[] matching_words = functions.containsString(words, "A");
+        System.out.println("Matching Words:");
+        for (String word : matching_words) {
+            if (word != null) {
+                System.out.print(word + " ");
+            }
+        }
+        //Q10
+        System.out.println("=============Highest Score===============");
+        String[][] data={{"85","76","45","91","82"},{"David","Moshe","Ilana","Shlomo","Hanna"}};
+        functions.printHighestScore(data);
     }
 }
