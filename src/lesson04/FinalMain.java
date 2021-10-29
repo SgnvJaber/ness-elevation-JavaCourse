@@ -60,7 +60,7 @@ public class FinalMain {
         functions.printPrimeNumbers(numbers);
         //Q14
         System.out.println("=============Number To Words ===============");
-        int number = -20;
+        int number = -19;
         System.out.println("The number: [" + number + "] in words is: [" + functions.numberToWords(number) + "]");
     }
 }

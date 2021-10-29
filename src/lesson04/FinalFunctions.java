@@ -204,6 +204,10 @@ public class FinalFunctions {
             words += "Minus ";
             number = -number;
         }
+        if (number > 999) {
+            return "Program Only Support from -999 to 999";
+
+        }
         String[] ones = {"Zero", "One", "Two", "Three", "four", "Five", "Six", "Seven", "Eight", "Nine"};
         String[] teens = {"Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen",};
         String[] twenties = {"", "", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"};
@@ -218,6 +222,7 @@ public class FinalFunctions {
         }
         int length = number_digits.size();
         int first_digit, second_digit, third_digit;
+
         if (length == 3) {
             third_digit = number_digits.get(2);
             second_digit = number_digits.get(1);
