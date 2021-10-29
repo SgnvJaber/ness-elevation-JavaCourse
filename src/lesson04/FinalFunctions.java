@@ -140,5 +140,116 @@ public class FinalFunctions {
         System.out.println(slot[1][0] + " has the highest score: [" + slot[0][0] + "]");
     }
 
+    //Q11
+    public void printSecondMaximumNumber(int[] numbers) {
+        int max = 0;
+        int previous_max = 0;
+        for (int number : numbers) {
+            if (number > max) {
+                previous_max = max;
+                max = number;
+            }
+        }
+        System.out.println("Max is: " + max + " Second Max is: " + previous_max);
+    }
+
+    //Q12
+    public boolean areEqual(int[] numbers, int[] other_numbers) {
+        if (numbers.length != other_numbers.length) {
+            return false;
+        }
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] != other_numbers[i]) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    //Q13
+    private boolean isPrimeNumber(int number) {
+        int divider = number - 1;
+        boolean isPrime = true;
+        while (divider > 1) {
+            if (number % divider == 0) {
+                isPrime = false;
+                break;
+            }
+            divider--;
+        }
+        return isPrime;
+
+
+    }
+
+    public void printPrimeNumbers(int[] numbers) {
+        for (int num : numbers) {
+            if (isPrimeNumber(num)) {
+                System.out.print("[" + num + "] ");
+            }
+
+        }
+        System.out.println();
+    }
+
+    //Q14
+    public String numberToWords(int number) {
+        String words = "";
+
+        if (number == 0) {
+            return "Zero";
+        }
+        if (number < 0) {
+            words += "Minus ";
+            number = -number;
+        }
+        String[] ones = {"Zero", "One", "Two", "Three", "four", "Five", "Six", "Seven", "Eight", "Nine"};
+        String[] teens = {"Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen",};
+        String[] twenties = {"", "", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"};
+        String hundred = "Hundred";
+        List<Integer> number_digits = new ArrayList<>();
+        int multiplier = 1;
+        while (number > 0) {
+            int division = (number % 10) * multiplier;
+            number_digits.add(division);
+            multiplier = multiplier * 10;
+            number = number / 10;
+        }
+        int length = number_digits.size();
+        int first_digit, second_digit, third_digit;
+        if (length == 3) {
+            third_digit = number_digits.get(2);
+            second_digit = number_digits.get(1);
+            first_digit = number_digits.get(0);
+            words = words + ones[third_digit / 100] + " " + hundred;
+            if (second_digit < 20) {
+                words = words + " " + teens[(second_digit - 10) + first_digit];
+
+            } else {
+                words = words + " " + twenties[second_digit / 10];
+                if (first_digit > 0)
+                    words = words + " " + ones[first_digit];
+            }
+        } else if (length == 2) {
+            second_digit = number_digits.get(1);
+            first_digit = number_digits.get(0);
+            if (second_digit < 20) {
+                words = words + teens[(second_digit - 10) + first_digit];
+
+            } else {
+                words = words + twenties[second_digit / 10];
+                if (first_digit > 0)
+                    words = words + " " + ones[first_digit];
+            }
+
+        } else {
+            first_digit = number_digits.get(0);
+            words = words + ones[first_digit];
+        }
+
+        return words;
+
+    }
 
 }
