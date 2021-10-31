@@ -18,24 +18,30 @@ public class FinalMain {
         //Q4)
         System.out.println("=============AVERAGE OF NUMBERS===============");
         System.out.println("Numbers Average is: " + functions.averageOfNumbers(numbers));
+
+
         //Q5)
         System.out.println("=============Calculator===============");
-        String[] equation = {"3", "+", "4"};
+        String[] equation = {"3", "/", "2"};
         System.out.println("[" + functions.myCalculator(equation) + "]");
+
         //Q6
         System.out.println("=============EvenDividedByFour===============");
         functions.printEvenDividedByFour(numbers);
         //Q7
         System.out.println("=============PRINT MIDDLE===============");
         functions.printMiddle(numbers);
+
         //Q8
         System.out.println("=============PRINT LYRICS===============");
         String song = "DO LA MI NO SA SIO ME NE";
         functions.printSongLyrics(song);
+
         //Q9A
         String[] words = {"ABC", "AAAAA", "BBB", "kjhdsfkjo", "JDSDFHKJH", "FGH", "LXCVKJ", "XLCKVJL", "VCKJLK", "VLK;LK", "VLKL"};
         System.out.println("=============PRINT LONGEST STRING===============");
         functions.printLongestString(words);
+
         //Q9B
         System.out.println("=============SEARCH FOR STRING===============");
         String[] matching_words = functions.containsString(words, "A");
@@ -50,11 +56,13 @@ public class FinalMain {
         System.out.println("=============Highest Score===============");
         String[][] data = {{"85", "76", "45", "91", "82"}, {"David", "Moshe", "Ilana", "Shlomo", "Hanna"}};
         functions.printHighestScore(data);
+
         System.out.println("=============Second Maximum Number===============");
         functions.printSecondMaximumNumber(numbers);
         //Q12
         System.out.println("=============Equal Arrays===============");
         System.out.println("Equal: " + functions.areEqual(numbers, numbers));
+
         //Q13
         System.out.println("=============Prime Numbers ===============");
         functions.printPrimeNumbers(numbers);
@@ -62,5 +70,7 @@ public class FinalMain {
         System.out.println("=============Number To Words ===============");
         int number = -19;
         System.out.println("The number: [" + number + "] in words is: [" + functions.numberToWords(number) + "]");
+
     }
+
 }

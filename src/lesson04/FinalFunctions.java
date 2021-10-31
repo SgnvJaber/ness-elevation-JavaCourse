@@ -18,13 +18,12 @@ public class FinalFunctions {
         return reverse;
     }
 
+
     //Q2
     public String reverseDouble(double number) {
         String reverse = "";
-        String[] reverse_array = Double.toString(number).split("");
-        for (int i = reverse_array.length - 1; i >= 0; i--) {
-            reverse += reverse_array[i];
-        }
+        String[] reverse_array = Double.toString(number).split("[.]");
+        reverse = reverse_array[1] + "." + reverse_array[0];
         return reverse;
     }
 
@@ -47,6 +46,7 @@ public class FinalFunctions {
         return sum / numbers.length;
     }
 
+
     //Q5
     public double myCalculator(String[] array) {
         double result = 0;
@@ -59,6 +59,9 @@ public class FinalFunctions {
             result = Double.parseDouble(array[0]) * Double.parseDouble(array[2]);
 
         } else if (array[1] == "/") {
+            if (array[2].equals("0")) {
+                throw new ArithmeticException();
+            }
             result = Double.parseDouble(array[0]) / Double.parseDouble(array[2]);
 
         } else {
@@ -105,6 +108,7 @@ public class FinalFunctions {
         System.out.println();
     }
 
+
     //Q9A
     public void printLongestString(String[] words) {
         String maxString = "";
@@ -139,6 +143,7 @@ public class FinalFunctions {
         }
         System.out.println(slot[1][0] + " has the highest score: [" + slot[0][0] + "]");
     }
+
 
     //Q11
     public void printSecondMaximumNumber(int[] numbers) {
